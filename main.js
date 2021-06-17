@@ -55,6 +55,9 @@ class Board {
 		let d = new Deck();
 		d.createDeck();
 		d.shuffleDeck();
+		// splice(0,5) draws 5 cards for each player
+        this.players[0].playerCards = d.cards.splice(0, 5); 
+        this.players[1].playerCards = d.cards.splice(0, 5);
 	}
 }
 
